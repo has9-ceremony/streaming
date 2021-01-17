@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+   <meta charset="utf-8">
+   <title>구운몽, 9기의 푸른 꿈</title>
+   <meta name="keywords" content="구운몽, 9기의 푸른 꿈">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+
+   <link rel="shortcut icon" href="img/12321321.ico">
+
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/main.css">
+
+   <style type="text/css">
+         @FONT-FACE {
+            font-family: 'Nanum GoDigANiGoGoDing';
+            src:url("font/nanumgoding.ttf");
+               }
+   </style>
+
+   <script type="text/javascript"> 
+      window.onload = function(){ var today = new Date(); 
+      var anniversary = new Date(2021, 01, 29);
+      var count = today.getTime() - anniversary.getTime(); 
+      count = Math.ceil(count/(24*60*60*1000)); 
+      var anni = document.getElementById("anni"); anni.innerHTML = "<FONT size='4pt' face='Nanum GoDigANiGoGoDing' color='#FFFFFF'>졸업식까지 D" + count + "</font>"; }
+   </script>
+
+</head>
+
+<body>
+   <header>
+      <div id="divPosition">
+         <p style="text-align:center"><font color = #FFFFFF face = "Nanum GoDigANiGoGoDing" size = "6pt">라이브 스트리밍 준비중입니다.</font>
+         <br><br><a href="https://www.youtube.com/watch?v=aMUvOC1VEHw"><img src="img/1.png" width="50px"></a><br><br><span id="anni"></span></p>
+      </div>
+   </header>
+
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+</html>
