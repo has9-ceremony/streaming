@@ -19,11 +19,20 @@
    </style>
 
    <script type="text/javascript"> 
-      window.onload = function(){ var today = new Date(); 
-      var anniversary = new Date(2021, 01, 29);
-      var count = today.getTime() - anniversary.getTime(); 
-      count = Math.ceil(count/(24*60*60*1000)); 
-      var anni = document.getElementById("anni"); anni.innerHTML = "<FONT size='4pt' face='Nanum GoDigANiGoGoDing' color='#FFFFFF'>졸업식까지 D" + count + "</font>"; }
+      //디데이 종료 일자 설정 
+      var countDownDate = new Date("January 29, 2021 10:00:00").getTime(); //1초마다 갱신되도록 함수 생성,실행 
+      var x = setInterval(function() { 
+         // 오늘 날짜 등록 
+         var now = new Date().getTime(); 
+         // 종료일자에서 현재일자를 뺀 시간 
+         var distance = countDownDate - now; 
+         // 각 변수에 일, 시, 분, 초를 등록 
+         var d = Math.floor(distance / (1000 * 60 * 60 * 24)); 
+         var h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
+         var m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)); 
+         var s = Math.floor((distance % (1000 * 60)) / 1000); 
+         //id가 d-day인 HTML코드에 내용 삽입 
+         document.getElementById("d-day").innerHTML = "<font face ='Nanum GoDigANiGoGoDing' size = '3pt' color=#FFFFFF>스트리밍 시작까지<br>" + d +"일 " + h + "시간 " + m + "분 " + s + "초 남음</font>"; });
    </script>
 
 </head>
@@ -32,7 +41,7 @@
    <header>
       <div id="divPosition">
          <p style="text-align:center"><font color = #FFFFFF face = "Nanum GoDigANiGoGoDing" size = "6pt">라이브 스트리밍<br>준비중입니다.</font>
-         <br><br><a href="https://www.youtube.com/watch?v=aMUvOC1VEHw"><img src="img/1.png" width="50px"></a><br><br><span id="anni"></span></p>
+         <br><br><a href="https://www.youtube.com/watch?v=aMUvOC1VEHw"><img src="img/1.png" width="50px"></a><br><br><span id="d-day"></span></p>
       </div>
    </header>
 
